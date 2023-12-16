@@ -32,7 +32,7 @@ Module.register("MMM-EasyPix", {
   getDom: function () {
     var wrapper = document.createElement("div");
     var image = document.createElement("img");
-    image.src = "/images/" + this.config.picName + "?seed=" + new Date();
+    image.src = "/modules/hosted_images/" + this.config.picName + "?seed=" + new Date();
     image.className = "photo";
     image.style.maxWidth = this.config.maxWidth;
     wrapper.appendChild(image);
@@ -41,9 +41,9 @@ Module.register("MMM-EasyPix", {
 
   random_imglink: function () {
     var myimages = new Array();
-    var myimages = "/images/";
+    var myimages = "/modules/hosted_images/";
 
-    var ry = Math.floor(Math.random() * "/images/".length);
+    var ry = Math.floor(Math.random() * "/modules/hosted_images/".length);
     if (ry == 0) {
       ry = 1;
     }
